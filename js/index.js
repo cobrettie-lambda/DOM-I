@@ -45,11 +45,11 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // CTA image
 let ctaImg = document.getElementById('cta-img');
-ctaImg.src = '../img/header-img.png';
+ctaImg.src = siteContent['cta']['img-src'];
 
 // mid-page image
 let middleImg = document.getElementById('middle-img');
-middleImg.src = '../img/mid-page-accent.jpg';
+middleImg.src = siteContent['main-content']['middle-img-src'];
 
 
 // NAV content 
