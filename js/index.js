@@ -64,10 +64,6 @@ navItem[4].textContent = siteContent['nav']['nav-item-5'];
 navItem[5].textContent = siteContent['nav']['nav-item-6'];
 
 
-
-
-
-
 // CTA content
 
 let ctaH1 = document.querySelector('.cta .cta-text h1');
@@ -75,3 +71,14 @@ ctaH1.textContent = siteContent['cta']['h1'];
 
 let ctaButton = document.querySelector('.cta .cta-text button');
 ctaButton.textContent = siteContent['cta']['button'];
+
+
+// Main Content
+
+const topContent = document.querySelectorAll('.top-content .text-content h4');
+topContent[0].textContent = siteContent['main-content']['features-h4'];
+topContent[1].textContent = siteContent['main-content']['about-h4'];
+
+const topContent2 = document.querySelectorAll('.top-content .text-content p');
+topContent2[0].textContent = siteContent['main-content']['features-content'];
+topContent2[1].textContent = siteContent['main-content']['about-content'];
