@@ -54,7 +54,18 @@ middleImg.src = siteContent['main-content']['middle-img-src'];
 
 // NAV content 
 
+// for loop to accomplish same goal - still work in progress
+// for (i = 0; i < nav.length; i++) {
+//   nav[i].textContent = siteContent['nav'][`nav-item-${i+1}`];
+// }
+
 let navItem = document.querySelectorAll('a');
+let navBar = document.querySelector('nav');
+
+// styling navItem,
+for (i = 0; i < navItem.length; i++) {
+  navItem[i].style.color = 'seagreen';
+}
 
 navItem[0].textContent = siteContent['nav']['nav-item-1'];
 navItem[1].textContent = siteContent['nav']['nav-item-2'];
@@ -62,6 +73,21 @@ navItem[2].textContent = siteContent['nav']['nav-item-3'];
 navItem[3].textContent = siteContent['nav']['nav-item-4'];
 navItem[4].textContent = siteContent['nav']['nav-item-5'];
 navItem[5].textContent = siteContent['nav']['nav-item-6'];
+
+
+// Add new content
+
+let newNavItem1 = document.createElement('a');
+newNavItem1.textContent = 'Home';
+newNavItem1.style.color = 'seagreen';
+
+let newNavItem2 = document.createElement('a');
+newNavItem2.textContent = 'Blog';
+newNavItem2.style.color = 'seagreen';
+
+
+navBar.prepend(newNavItem1);
+navBar.appendChild(newNavItem2);
 
 
 // CTA content
@@ -75,13 +101,13 @@ ctaButton.textContent = siteContent['cta']['button'];
 
 // Main Content
 
-const topContent = document.querySelectorAll('.top-content .text-content h4');
-topContent[0].textContent = siteContent['main-content']['features-h4'];
-topContent[1].textContent = siteContent['main-content']['about-h4'];
+const topContentH = document.querySelectorAll('.top-content .text-content h4');
+topContentH[0].textContent = siteContent['main-content']['features-h4'];
+topContentH[1].textContent = siteContent['main-content']['about-h4'];
 
-const topContent2 = document.querySelectorAll('.top-content .text-content p');
-topContent2[0].textContent = siteContent['main-content']['features-content'];
-topContent2[1].textContent = siteContent['main-content']['about-content'];
+const topContentP = document.querySelectorAll('.top-content .text-content p');
+topContentP[0].textContent = siteContent['main-content']['features-content'];
+topContentP[1].textContent = siteContent['main-content']['about-content'];
 
 const bottomContentH = document.querySelectorAll('.bottom-content .text-content h4');
 bottomContentH[0].textContent = siteContent['main-content']['services-h4'];
